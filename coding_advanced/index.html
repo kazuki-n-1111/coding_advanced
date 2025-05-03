@@ -7,14 +7,179 @@
   <link rel="stylesheet" type="text/css" href="base.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script>
   $(function(){
     // ここに処理を記述
   });
   </script>
+  <style>
+    .list{font-size: 10px;}
+    .button_fs{font-size: 15px;}
+  </style>
 </head>
 <body>
-  <p>Hello</p>
+  <!--ナビゲーション-->
+  <nav class="navbar bg-warning navbar-expand-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand fw-bolder fs-1">Casteria</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav_content">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link">Food</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link">Drink</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link">お問い合わせ</a>
+          </li>
+          <li>
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search">
+              <span class="input-group-button">
+                <button type="button" class="btn btn-default bg-light">Search</button>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  <!--ナビゲーションここまで-->
+
+  <!--ここからは画像表示、カルーセル、インジケーター、３秒で切り替わり、carousel-control-prev or next-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="ratio ratio-4x3 col">
+        <img class="" src="./img/food.jpg" alt="picture1" />
+      </div>
+      <div class="ratio ratio-4x3 col">
+        <img class="" src="./img/food2.jpg" alt="picture2" />
+      </div>
+    </div>
+  </div>
+  
+<!--以下、本文-->
+<!--全体的に文字を小さくしたい-->
+  <div class="container-fluid col-10 p-0">
+    <div class="accordion mt-2" id="accordion_guidance">
+      <h6>新型コロナウイルスに対する取り組みの最新情報をご案内</h6>
+      <div class="accordion-item border-0">  <!--「衛生面に関して」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-danger rounded-0 button_fs" type="button" data-bs-toggle="collapse" data-bs-target="#about_sanitary">
+            ▪️衛生面について
+          </button>
+        </h2>
+        <div id="about_sanitary" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                マスクを着用しての接客
+              </li>
+              <li>
+                出勤前の検温の徹底
+              </li>
+              <li>
+                レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置
+              </li>
+              <li>
+                より頻度の高い手洗いの励行
+              </li>
+              <li>
+                テーブルにお客様用の消毒用アルコールの設置
+              </li>
+              <li>
+                従業員間の距離確保のため、休憩や研修時の客席利用
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「衛生面に関して」おわり-->
+
+      <div class="accordion-item border-0">  <!--「お客様へのご協力のお願い」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-danger rounded-0 button_fs" type="button" data-bs-toggle="collapse" data-bs-target="#about_cooperation">
+            ▪️お客様へのご協力のお願い
+          </button>
+        </h2>
+        <div id="about_cooperation" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                店内では、飲食時以外のマスク着用をお願いいたします
+              </li>
+              <li>
+                入店時の手指の消毒にご協力ください
+              </li>
+              <li>
+                レジに並ぶ際、目安を示すフロアステッカーに沿った列感覚の確保にご協力ください
+              </li>
+              <li>
+                多数でお越しの際は、お１人がまとめてご注文願います（混雑時に入場制限をする場合がございます）
+              </li>
+              <li>
+                発熱や体調不良の際はご入店をお控えください
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「お客様へのご協力のお願い」おわり-->
+
+      <div class="accordion-item border-0">  <!--「サービスに関して」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-danger rounded-0 button_fs" type="button" data-bs-toggle="collapse" data-bs-target="#about_service">
+            ▪️サービスに関して
+          </button>
+        </h2>
+        <div id="about_service" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                直接お渡しする商品の提供、金銭授受時にグローブの着用
+              </li>
+              <li>
+                ドリンクやフードのサンプリング中止
+              </li>
+              <li>
+                地域活動・イベントの中止
+              </li>
+              <li>
+                混雑時間帯の客室の譲り合いへのご協力お願いの実施
+              </li>
+              <li>
+                店内設置しているミルク、ハチミツ、パウダー類の一時引き下げ
+              </li>
+              <li>
+                混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「サービスに関して」おわり-->
+    </div>
+  </div>
+
+  <div class="container-fluid col-10 mt-5"> <!--ここからフェードイン-->
+    <div class="row col-10 align-items-start">
+      <div class="fade show animated-box col-12">  <!--別途CSSでanimated-boxクラスとanimated-box.showクラスを書く-->
+        <h6>Signature Food</h6>
+      </div>
+      <div class="picture col ratio ratio-4x3">
+        <img src="./img/food.jpg" alt="picture">
+      </div>
+      <div class="col">
+        <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分jになれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる２種のソースも絶品です！</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
