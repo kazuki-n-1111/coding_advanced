@@ -33,3 +33,27 @@ body {
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.img{
+	width: 500px;
+	
+}
+
+.circle{
+	width: 30vh;
+  height: 30vh;
+  border-radius: 50%;  /* 円形にする */
+  position: relative;  /* 基準値とする */
+  overflow: hidden;
+}
+
+.fadeIn{
+	transition: 1s;
+	opacity: 0;
+}
+
+.fadeIn.animated{
+	opacity: 1;
+}
+
+
