@@ -72,35 +72,46 @@
   <!--あとで処理書く-->
   <!--カルーセル、インジケーター、３秒で切り替わり、carousel-control-prev or next-->
   <div id="myCarousel" class="carousel slide multi-carousel d-none d-sm-block" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
     <div class="container-fluid carousel-inner">
         <div class="carousel-item active">
             <div class="row">
-                <!--
-                <div class="col-6 carousel-item active">
-                <img class="img-carousel d-block w-100ß" src="./img/interior.jpg" alt="picture" />
-                </div>  -->
+                
                 <div class="col-6 p-0 m-0">
-                    <img class="img-carousel ratio ratio-4x3" src="./img/food.jpg" alt="picture" />
-                </div>
+                <img class="img-carousel img-fluid" src="./img/interior.jpg" alt="picture" />
+                </div>  
                 <div class="col-6 p-0 m-0">
-                    <img class="img-carousel ratio ratio-4x3" src="./img/food2.jpg" alt="picture" />
+                    <img class="img-carousel img-fluid" src="./img/food.jpg" alt="picture" />
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="row">
-                <!--
-                <div class="col-6 carousel-item active">
-                  <img class="img-carousel d-block w-100" src="./img/interior.jpg" alt="picture" />
-                </div>  -->
+                  
+                <div class="col-6 p-0 m-0">
+                  <img class="img-carousel img-fluid" src="./img/food.jpg" alt="picture" />
+                </div>
                 <div class="col-6 p-0 m-0">
                   <img class="img-carousel img-fluid" src="./img/food2.jpg" alt="picture" />
                 </div>
-                <div class="col-6 p-0 m-0">
-                  <img class="img-carousel img-fluid" src="./img/food3.jpg" alt="picture" />
-                </div>
             </div>
         </div>
+        <div class="carousel-item">
+          <div class="row">
+                
+              <div class="col-6 p-0 m-0">
+                <img class="img-carousel img-fluid" src="./img/food2.jpg" alt="picture" />
+              </div>
+              <div class="col-6 p-0 m-0">
+                <img class="img-carousel img-fluid" src="./img/food3.jpg" alt="picture" />
+              </div>
+          </div>
+      </div>
     </div>
     <button type="button" class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -111,7 +122,13 @@
   </div>
 
   <!--スマホ版カルーセル-->
-  <div id="smCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="smCarousel" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
     <div class="container-fluid carousel-inner">
       <div class="carousel-item active">
         <div class="col-12">
