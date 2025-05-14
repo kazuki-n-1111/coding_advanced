@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#7コーディング応用</title>
+  <link rel="stylesheet" type="text/css" href="./css/base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script>
+  $(function(){
+    // ここに処理を記述
+  });
+  </script>
+  <style>
+    body{background-color: #FFEFD5;}
+    nav{background-color: lightgray;}
+    /*.img-carousel{width: 50vh;}*/
+    .menu{font-size: 12px;}
+    .list{font-size: 10px;}
+    .button_fs{font-size: 15px;}
+    .button_color{background-color: #FFC7AF;}
+    .paragraph{padding-top: 10px; font-size: 10px;}
+    .address{font-size: 9px;}
+    .address_color{background-color: black;}
+    .store_address{font-size: 8px;}
+    .icon{padding-right: 0px;}
+    .opening_hours{font-size: 9px;}
+    .info{margin-left: 5px;font-size: 14px;}
+    .footer{font-size: 8px;}
+    .footer_container{height: 10vh;padding-top: 3vh;}
+    footer{background-color: darkgray;}
+    .img-carousel{width: auto;height: 70vh;object-fit: cover;object-position: center;}
+
+  </style>
+</head>
+<body>
+  <!--ナビゲーション-->
+  <nav class="navbar navbar-expand-sm nav_color">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand fw-bolder fs-1">Casteria</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav_content">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link menu">Home</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link menu">Food</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link menu">Drink</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link menu">お問い合わせ</a>
+          </li>
+          <li>
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search">
+              <span class="input-group-button">
+                <button type="button" class="btn btn-default bg-light">Search</button>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  <!--ナビゲーションおわり-->
+
+  <!--あとで処理書く-->
+  <!--カルーセル、インジケーター、３秒で切り替わり、carousel-control-prev or next-->
+  <div id="myCarousel" class="carousel slide multi-carousel d-none d-sm-block" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="container-fluid carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                
+                <div class="col-6 p-0 m-0">
+                <img class="img-carousel img-fluid" src="./img/interior.jpg" alt="picture" />
+                </div>  
+                <div class="col-6 p-0 m-0">
+                    <img class="img-carousel img-fluid" src="./img/food.jpg" alt="picture" />
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                  
+                <div class="col-6 p-0 m-0">
+                  <img class="img-carousel img-fluid" src="./img/food.jpg" alt="picture" />
+                </div>
+                <div class="col-6 p-0 m-0">
+                  <img class="img-carousel img-fluid" src="./img/food2.jpg" alt="picture" />
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+                
+              <div class="col-6 p-0 m-0">
+                <img class="img-carousel img-fluid" src="./img/food2.jpg" alt="picture" />
+              </div>
+              <div class="col-6 p-0 m-0">
+                <img class="img-carousel img-fluid" src="./img/food3.jpg" alt="picture" />
+              </div>
+          </div>
+      </div>
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!--スマホ版カルーセル-->
+  <div id="smCarousel" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button style="border-radius: 50%; height: 10px; width: 10px;" type="button" data-bs-target="#smCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="container-fluid carousel-inner">
+      <div class="carousel-item active">
+        <div class="col-12">
+          <img class="img-carousel img-fluid" src="./img/interior.jpg" alt="">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col-12">
+          <img class="img-carousel img-fluid" src="./img/food.jpg" alt="">
+        </div>
+      </div> 
+      <div class="carousel-item">
+        <div class="col-12">
+          <img class="img-carousel img-fluid" src="./img/food2.jpg" alt="">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="col-12">
+          <img class="img-carousel img-fluid" src="./img/food3.jpg" alt="">
+        </div>
+      </div> 
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#smCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#smCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
+  
+  <!--以下、本文-->
+  <!--全体的に文字を小さくしたい-->
+  <div class="container-fluid col-10">
+    <div class="accordion mt-2" id="accordion_guidance">
+      <h6>新型コロナウイルスに対する取り組みの最新情報をご案内</h6>
+      <div class="accordion-item border-0">  <!--「衛生面に関して」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed rounded-0 button_fs button_color" type="button" data-bs-toggle="collapse" data-bs-target="#about_sanitary">
+            ▪️衛生面について
+          </button>
+        </h2>
+        <div id="about_sanitary" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                マスクを着用しての接客
+              </li>
+              <li>
+                出勤前の検温の徹底
+              </li>
+              <li>
+                レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置
+              </li>
+              <li>
+                より頻度の高い手洗いの励行
+              </li>
+              <li>
+                テーブルにお客様用の消毒用アルコールの設置
+              </li>
+              <li>
+                従業員間の距離確保のため、休憩や研修時の客席利用
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「衛生面に関して」おわり-->
+
+      <div class="accordion-item border-0">  <!--「お客様へのご協力のお願い」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed rounded-0 button_fs button_color" type="button" data-bs-toggle="collapse" data-bs-target="#about_cooperation">
+            ▪️お客様へのご協力のお願い
+          </button>
+        </h2>
+        <div id="about_cooperation" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                店内では、飲食時以外のマスク着用をお願いいたします
+              </li>
+              <li>
+                入店時の手指の消毒にご協力ください
+              </li>
+              <li>
+                レジに並ぶ際、目安を示すフロアステッカーに沿った列感覚の確保にご協力ください
+              </li>
+              <li>
+                多数でお越しの際は、お１人がまとめてご注文願います（混雑時に入場制限をする場合がございます）
+              </li>
+              <li>
+                発熱や体調不良の際はご入店をお控えください
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「お客様へのご協力のお願い」おわり-->
+
+      <div class="accordion-item border-0">  <!--「サービスに関して」はじまり-->
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed rounded-0 button_fs button_color" type="button" data-bs-toggle="collapse" data-bs-target="#about_service">
+            ▪️サービスに関して
+          </button>
+        </h2>
+        <div id="about_service" class="accordion-collapse collapse" data-bs-parent="accordion_guidance"> <!--中身-->
+          <div class="accordion-body">
+            <ul class="list">
+              <li>
+                直接お渡しする商品の提供、金銭授受時にグローブの着用
+              </li>
+              <li>
+                ドリンクやフードのサンプリング中止
+              </li>
+              <li>
+                地域活動・イベントの中止
+              </li>
+              <li>
+                混雑時間帯の客室の譲り合いへのご協力お願いの実施
+              </li>
+              <li>
+                店内設置しているミルク、ハチミツ、パウダー類の一時引き下げ
+              </li>
+              <li>
+                混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  <!--「サービスに関して」おわり-->
+    </div>
+  </div>
+
+  <!--フェードのとこ-->
+  <div class="container-fluid fadeIn">
+    <div class="mt-5 col-10 offset-1">
+      <h6 class="m-2">Signature Food</h6>
+    </div>
+    <div class="row">
+      <div class="offset-1 col-10 col-sm-5">
+        <img src="./img/food.jpg" alt="picture" class="img img-fluid">
+      </div>
+      <div class="offset-1 offset-sm-0 col-10 col-sm-5">
+        <p class="paragraph">
+          サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。
+          サーモンの美味しさを引き立てる２種のソースも絶品です！
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--フェードのとこ-->
+  <div class="container-fluid fadeIn">
+    <div class="mt-5 col-10 offset-1">
+      <h6 class="m-2">Our Coffee</h6>
+    </div>
+    <div class="row">
+      <div class="offset-1 col-10 col-sm-5">
+        <img src="./img/barista.jpg" alt="picture" class="img img-fluid">
+      </div>
+      <div class="offset-1 offset-sm-0 col-10 col-sm-5">
+        <p class="paragraph">
+          当店のコーヒー豆は厳選して世界中から買い付けています。そして、そのコーヒー豆の美味しさを最大限に引き出すために自社のロースタリーで焙煎しています。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--フェードのとこ-->
+  <div class="container-fluid fadeIn">
+    <div class="mt-5 col-10 offset-1">
+      <h6 class="m-2">Our Food</h6>
+    </div>
+    <div class="row">
+      <div class="offset-1 col-10 col-sm-5">
+        <img src="./img/food3.jpg" alt="picture" class="img img-fluid">
+      </div>
+      <div class="offset-1 offset-sm-0 col-10 col-sm-5">
+        <p class="paragraph">
+          当店は何よりまずは衛生医管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--フェードのとこ-->
+  <!--住所など-->
+  <div class="cotainer-fluid mt-4 fadeIn">
+    <div class="offset-1 col-10 address_color row">
+      <div class="col-12 col-sm-6 text-white mt-3">
+        <p class="info">Address</p>
+        <p class="address">
+          681 xxxx Drive, xxxxx xxxx #01-06 000000<br>
+          Opening Hours
+        </p>
+        <p class="info">Mondays - Friday: 10am - 9pm</p>
+        <p class="opening_hours">Saturdays,Sundays&Public Holidays: 9am-9pm</p>
+      </div>
+      <div class="offset-sm-0 col-12 col-sm-6">
+        <img src="./img/barista.jpg" class="ratio ratio-4x3">
+      </div>
+    </div>
+  </div>
+
+  <!--フェードのとこ-->
+  <!--店舗一覧-->
+  <!--たぶんcssじゃないと丸くならないからあとでcss当てる-->
+  <div class="d-none d-sm-block fadeIn">
+    <div class="container col-10">
+      <div class="offset-4 col-4"><p class="text-center p-2">店舗一覧</p></div>
+      <div class="row">
+        <div class="col-3">
+          <img src="./img/restaurant2.jpg" class="circle d-block mx-auto">
+          <div class="row mt-1">
+            <img src="./img/icon_pin.svg" height="10px" class="icon offset-2 col-2"><p class="store_address col p-0">東京都渋谷区xxxx xxxx</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="./img/restaurant3.jpg" class="circle d-block mx-auto">
+          <div class="row mt-1">
+            <img src="./img/icon_pin.svg" height="10px" class="icon offset-2 col-2"><p class="store_address col p-0">千葉県松戸市xxxx xxxx</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="./img/restaurant4.jpg" class="circle d-block mx-auto">
+          <div class="row mt-1">
+            <img src="./img/icon_pin.svg" height="10px" class="icon offset-2 col-2"><p class="store_address col p-0">神奈川県横浜市xxxx xxxx</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="./img/restaurant5.jpg" class="circle d-block mx-auto">
+          <div class="row mt-1">
+            <img src="./img/icon_pin.svg" height="10px" class="icon offset-2 col-2"><p class="store_address col p-0">埼玉県川越市xxxx xxxx</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--フッター-->
+  <footer>
+    <div class="container-fluid footer_container">
+      <div class="col-12 h-100">
+        <div class="offset-2 col-8 footer row">
+          <p class="text-end col-6">プライバシーポリシー</p>
+          <p class="text-center col-3">お問い合わせ</p>
+          <p class="text-start col-3 p-0">運営会社</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--フェードインの処理は以下に記述-->
+  <script>
+    $(window).on('load scroll', function (){
+
+      var box = $('.fadeIn');
+      var animated = 'animated';
+
+      box.each(function(){
+
+        var boxOffset = $(this).offset().top;
+        var scrollPos = $(window).scrollTop();
+        var wh = $(window).height();
+
+        if(scrollPos > boxOffset - wh + 200 ){
+
+          $(this).addClass(animated);
+      
+        }
+      });
+    });    
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
