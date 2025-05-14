@@ -40,7 +40,7 @@ body {
 }
 
 .circle{
-	width: 30vh;
+  width: 30vh;
   height: 30vh;
   border-radius: 50%;  /* 円形にする */
   position: relative;  /* 基準値とする */
